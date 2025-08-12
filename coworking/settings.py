@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'coworking.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'cwkgpsdb',
-        'HOST': 'localhost',
-        'PORT': '5433',  
+        'NAME': '*',
+        'USER': '*',
+        'PASSWORD': '*',
+        'HOST': '*',
+        'PORT': '*',  
     }
 }
 
