@@ -11,5 +11,8 @@ def index(request):
     return HttpResponse("work")
     #return JsonResponse(solutions, safe=False)
 
-def solutions(request):
-    return JsonResponse({"ADsda":33})
+def userPage():
+    return HttpResponse()
+
+def regLogPage():
+    return HttpResponse()
