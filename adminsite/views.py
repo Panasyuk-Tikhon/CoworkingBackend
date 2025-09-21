@@ -5,3 +5,12 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("hello admin")
+
+def getOrders(request):
+    return HttpResponse("gotten")
+
+def acceptOrder(request):
+    return HttpResponse("accepted")
+
+def deleteOrder(request):
+    return HttpResponse("deleted")

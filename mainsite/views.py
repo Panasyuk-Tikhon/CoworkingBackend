@@ -1,18 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import Solutions
-# Create your views here.
 
 def index(request):
-    solutions = Solutions.objects.all()
-    print(solutions)
-    for solution in solutions:
-        print(solution)
-    return HttpResponse("work")
-    #return JsonResponse(solutions, safe=False)
+    return HttpResponse("index")
 
-def userPage():
+def solutions(request):
+    raw_solutions = Solutions.objects.all()
+    solutions = []
+    print(raw_solutions)
+    for solution in raw_solutions.values():
+        print(solution)
+        solutions.append(solution)
+    print(solutions)
+    return JsonResponse(solutions, safe=False)
+
+def userPage(request):
     return HttpResponse()
 
-def regLogPage():
+def regLogPage(request):
     return HttpResponse()
